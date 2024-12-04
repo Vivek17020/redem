@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Game Over!</h1>
+        <p>Your Total Score: <span id="score-value">0</span></p>
+        <button id="redeem-button" onclick="openRedeemPopUp()">Redeem</button>
+    </div>
+
+    <!-- Goodies Redemption Modal -->
+    <div id="redeem-modal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations! You've earned rewards.</h2>
+            <img src="goodies.png" alt="Goodies" id="goodies-image">
+            <p>Score Required to Redeem: <span id="required-score"></span></p>
+            <p>Your Score: <span id="modal-score"></span></p>
+            <p>Your TON Value: <span id="ton-value"></span> TON</p>
+            <button id="withdraw-button" onclick="withdrawTON()">Withdraw TON</button>
+            <button onclick="closeRedeemPopUp()">Close</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
